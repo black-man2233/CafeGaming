@@ -73,14 +73,3 @@ function insertEvents() {
 
 // Call the function to insert all gaming events
 insertEvents();
-
-// import mysql from "mysql2";
-
-// Sign up / Sign in handler
-const userName = document.querySelector("#userName");
-const passWord = document.querySelector("#passWord");
-const submitBtn = document.querySelector("#submitBtn");
-
-submitBtn.addEventListener("click", () => {
-  TestDataBase();
-});

@@ -1,5 +1,14 @@
 import mysql from "mysql2";
 
+const userName = document.querySelector("#userName");
+const passWord = document.querySelector("#passWord");
+const submitBtn = document.querySelector("#submitBtn");
+
+submitBtn.addEventListener("click", () => {
+  TestDataBase();
+});
+
+
 const connection = mysql.createConnection({
   host: "sql.itcn.dk",
   user: "kevi3758.SKOLE",

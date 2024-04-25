@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <title>Event Preview</title>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../Styles/events.css">
+    <title>Create Event</title>
+
+    <link rel="stylesheet" href="../styles/createEvent.css">
     <link rel="stylesheet" href="../styles/index.css">
 
     <!-- Navigation bar -->
@@ -39,19 +36,31 @@
     </nav>
 </head>
 
-<body>
-    <div class="EventCreateDiv">
-        <h1>Events</h1>
-        <a class="CreateEventBtn" href="../Pages/CreateEvent.html" >Create</a>
-    </div>
-    <div class="UpcomingEvent">
-        <link rel="stylesheet" href="../Styles/events.css">
-        <div class="event-container">
-            <!-- Event cards will be dynamically generated here -->
-        </div>
-        <script src="/Js/Events.js"></script>
 
+<body>
+    <div class="container">
+        <h1>Create Event</h1>
+        
+        <div class="form-container">
+            <form>
+                <label for="eventName">Event Name:</label>
+                <input type="text" id="eventName" required><br>
+                
+                <label for="eventDescription">Event Description:</label>
+                <input type="text" id="eventDescription" required><br>
+                
+                <label for="eventLocation">Event Location:</label>
+                <input type="text" id="eventLocation"><br>
+                
+                <label for="eventDate">Event Date:</label>
+                <input type="date" id="eventDate" required><br>
+                
+                <button type="submit" onclick="createEvent()">Create Event</button>
+            </form>
+        </div>
     </div>
 </body>
-
 </html>
+
+
+<script src="../JS/createEvent.js"></script>
