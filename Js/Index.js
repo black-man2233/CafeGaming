@@ -84,38 +84,3 @@ const submitBtn = document.querySelector("#submitBtn");
 submitBtn.addEventListener("click", () => {
   TestDataBase();
 });
-
-function TestDataBase() {
-  // Create a connection pool to the MySQL database
-  const express = require("express");
-  const mysql = require("mysql2");
-  const app = express();
-
-  const connection = mysql.createConnection({
-    host: "sql.itcn.dk",
-    host: "127.0.0.1",
-    user: "kevi3758.SKOLE",
-    password: "83f8HrA3wQ",
-    database: "kevi37582.SKOLE",
-  });
-
-  connection.connect(function (err) {
-    if (err) {
-      console.error("Error connecting to MySQL database: " + err.stack);
-      return;
-    }
-    console.log("Connected to MySQL database as id " + connection.threadId);
-  });
-
-  app.get('/data', (req, res) => {
-    connection.query('SELECT * FROM your_table', (error, results, fields) => {
-      if (error) {
-        res.status(500).send(error.message);
-      } else {
-        res.json(results);
-      }
-    });
-  });
-
-  
-}
