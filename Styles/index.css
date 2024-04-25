@@ -60,6 +60,7 @@ nav {
     display: flex;
     gap: 10px;
     margin: 0 10px;
+    color: black;
 }
 
 .auth-form-inline input {
@@ -211,4 +212,11 @@ footer {
         gap: 20px;
         padding: 20px;
     }
+}
+
+.readMoreEventButton{
+    color: #fff;
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+    cursor: pointer;
 }

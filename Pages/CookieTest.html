@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <label for="firstText">First Name:</label>
+        <input id="firstText">
+        <label for="lastText">Last Name:</label>
+        <input id="lastText">
+        <button id="submitBtn">Submit</button>
+        <button id="cookieBtn">Get Cookies</button>
+    </form>
+
+    <script>
+
+        const firstText = document.querySelector("#firstText");
+        const lastText = document.querySelector("#lastText");
+        const submitBtn = document.querySelector("#submitBtn");
+        const cookieBtn = document.querySelector("#cookieBtn");
+
+        submitBtn.addEventListener("click", () => {
+            setCookie("firstName", firstText.value, 365);
+            setCookie("lastName", lastText.value, 365);
+        });
+        cookieBtn.addEventListener("click", () => {
+            firstText.value = getCookie("firstName");
+            lastText.value = getCookie("lastName");
+        });
+
+        function setCookie(name, value, daysToLive){
+            const date = new Date();
+            date.setTime(date.getTime() +  (daysToLive * 24 * 60 * 60 * 1000));
+            let expires = "expires=" + date.toUTCString();
+            document.cookie = `${name}=${value}; ${expires}; path=/`;
+        }
+        function deleteCookie(name){
+            setCookie(name, null, -1); // Setting daysToLive to -1 deletes the cookie
+        }
+        function getCookie(name){
+            const cDecoded = decodeURIComponent(document.cookie);
+            const cArray = cDecoded.split("; ");
+            let result = null;
+            
+            cArray.forEach(element => {
+                if(element.indexOf(name) == 0){
+                    result = element.substring(name.length + 1);
+                }
+            });
+            return result;
+        }
+
+    </script>
+
+</body>
+</html>

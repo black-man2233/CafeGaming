@@ -1,13 +1,46 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <title>Store</title>
     <link rel="stylesheet" href="../Styles/store.css">
+    <link rel="stylesheet" href="../styles/index.css">
+
+    <!-- Navigation bar -->
+    <nav>
+        <div class="nav-container">
+            <a href="../index.html">
+            <a href="../Pages/CookieTest.html">
+                <div class="logo">Cafesda Gaming</div>
+            </a>
+
+            <!-- Sign-up and sign-in forms in the navigation bar -->
+            <div class="auth-forms">
+                <form class="auth-form-inline" action="#sign-in" method="post">
+                    <input type="text" id="userName" placeholder="Username" required>
+                    <input type="password" id="userPass" placeholder="Password" required>
+                    <button type="submit" id="signInBtn">Sign In</button>
+                    <button type="button" onclick="location.href='Pages/SignUp.html';">Sign Up</Button>
+
+                </form>
+
+            </div>
+        </div>
+    </nav>
+
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="/Pages/AboutUs.html">About</a>
+        <a href="/Pages/Events.html">Events</a>
+        <a href="/Pages/Store.html">Store</a>
+        <a href="/Pages/Contact.html">Contact</a>
+    </nav>
 </head>
+
 <body>
     <h1>Welcome to the Store</h1>
-    
+
     <!-- Your store content goes here -->
     <div class="merchandise" id="boardGames">
         <h2>Gaming Board Games</h2>
@@ -22,7 +55,7 @@
             <!-- Card games will be dynamically added here -->
         </ul>
     </div>
-    
+
     <script src="script.js"></script>
     <script>
         // Sample data for board games and card games
@@ -44,7 +77,7 @@
         function generateMerchandiseList(containerId, itemsData) {
             const container = document.getElementById(containerId);
             const ul = container.querySelector('ul');
-            
+
             itemsData.forEach(item => {
                 const li = document.createElement('li');
                 li.innerHTML = `
@@ -62,4 +95,5 @@
         generateMerchandiseList('cardGames', cardGamesData);
     </script>
 </body>
+
 </html>

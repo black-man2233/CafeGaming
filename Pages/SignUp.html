@@ -9,23 +9,34 @@
     <!-- Link to CSS file -->
     <link rel="stylesheet" href="../Styles/Signup.css">
     <link rel="stylesheet" href="../styles/index.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
-     <!-- Navigation bar -->
-     <nav>
+    <!-- Navigation bar -->
+    <nav>
         <div class="nav-container">
-            <div class="logo">Cafe Gaming</div>
+            <a href="../index.html">
+                <div class="logo">Cafe Gaming</div>
+            </a>
+
+            <!-- Sign-up and sign-in forms in the navigation bar -->
+            <div class="auth-forms">
+                <form class="auth-form-inline" action="#sign-in" method="post">
+                    <input type="text" id="userName" placeholder="Username" required>
+                    <input type="password" id="userPass" placeholder="Password" required>
+                    <button type="submit" id="signInBtn">Sign In</button>
+                    <button type="button" onclick="location.href='Pages/SignUp.html';">Sign Up</Button>
+
+                </form>
+
             </div>
         </div>
     </nav>
 
     <nav>
         <a href="../index.html">Home</a>
-        <a href="../Pages/AboutUs.html">About</a>
-        <a href="../Pages/Games.html">Games</a>
-        <a href="../Pages/Events.html">Events</a>
-        <a href="../Pages/Store.html">Contact</a>
-        <a href="../Pages/Contact.html">Contact</a>
+        <a href="/Pages/AboutUs.html">About</a>
+        <a href="/Pages/Events.html">Events</a>
+        <a href="/Pages/Store.html">Store</a>
+        <a href="/Pages/Contact.html">Contact</a>
     </nav>
 </head>
 

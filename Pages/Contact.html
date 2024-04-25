@@ -1,20 +1,15 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <title>Event Preview</title>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../Styles/events.css">
+    <title>Contact Us</title>
+
+    <link rel="stylesheet" href="../styles/contact.css">
     <link rel="stylesheet" href="../styles/index.css">
 
     <!-- Navigation bar -->
     <nav>
         <div class="nav-container">
-            <a href="../index.html">
-                <div class="logo">Cafe Gaming</div>
-            </a>
+            <div class="logo">Cafe Gaming</div>
 
             <!-- Sign-up and sign-in forms in the navigation bar -->
             <div class="auth-forms">
@@ -40,10 +35,20 @@
 </head>
 
 <body>
-    <h1>Upcoming Gaming Events</h1>
-    <div class="event-container"></div>
-        <!-- Event cards will be dynamically generated here -->
+    <div class="container">
+        <h1>Contact Us</h1>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
     </div>
-    <script src="../Js/Events.js"></script>
 </body>
 </html>
