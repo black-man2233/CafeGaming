@@ -6,7 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles/index.css">
+
 </head>
 
 <body>
@@ -18,17 +20,23 @@
             <!-- Sign-up and sign-in forms in the navigation bar -->
             <div class="auth-forms">
                 <form class="auth-form-inline" action="#sign-in" method="post">
-                    <input type="text" name="username" placeholder="Username" required>
-                    <input type="password" name="password" placeholder="Password" required>
-                    <button type="submit">Sign In</button>
-                    <!-- <button type="button" href="Pages/SignUp.html"> Sign Up</button> -->
-
-                    <Button type="button" onclick="location.href='Pages/SignUp.html';">Sign Up</Button>
+                    <input type="text" id="userName" placeholder="Username" required>
+                    <input type="password" id="userPass" placeholder="Password" required>
+                    <button type="submit" id="signInBtn">Sign In</button>
+                    <button type="button" onclick="location.href='Pages/SignUp.html';">Sign Up</Button>
 
                 </form>
 
             </div>
         </div>
+    </nav>
+
+    <nav>
+        <a href="./index.html">Home</a>
+        <a href="/Pages/AboutUs.html">About</a>
+        <a href="/Pages/Events.html">Events</a>
+        <a href="/Pages/Store.html">Store</a>
+        <a href="/Pages/Contact.html">Contact</a>
     </nav>
 
     <!-- Main content -->
@@ -38,15 +46,51 @@
     </div>
 
     <!-- Upcoming events section -->
-    <div>
+    <div class="UpcomingEvent">
         <link rel="stylesheet" href="../Styles/events.css">
         <h2>Upcoming Gaming Events</h1>
             <div class="event-container">
                 <!-- Event cards will be dynamically generated here -->
             </div>
             <script src="/Js/index.js"></script>
+            <a type="button" class="btn btn-primary" href="/Pages/Events.html">Show more</a>
+
     </div>
 
-</body>
+    <div class="container">
+        <div class="section">
+            <div class="image" style="float: left; margin-right: 20px;">
+                <img src="/Images/CafeGaming.webp" alt="Café Gaming" style="max-width: 200px;">
+            </div>
+            <div class="content">
+                <h2>About Us</h2>
+                <p>Welcome to Café Gaming! We are a unique café that combines the love for gaming with delicious coffee and snacks. Whether you're a casual gamer or a hardcore enthusiast, we have something for everyone.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="image" style="float: left; margin-right: 20px;">
+                <img src="/Images/gameTypes.jpg" alt="Games" style="max-width: 200px;">
+            </div>
+            <div class="content">
+                <h2>Our Games</h2>
+                <p>Discover a wide range of games at our café, from classic board games to the latest video game releases. Grab a controller or join a tabletop game with friends while enjoying your favorite coffee.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="image" style="float: left; margin-right: 20px;">
+                <img src="/Images/events.jpg" alt="Events" style="max-width: 200px;">
+            </div>
+            <div class="content">
+                <h2>Events</h2>
+                <p>Join us for exciting gaming events and tournaments. Compete against other players, win prizes, and make new friends in our vibrant gaming community.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Café Gaming. All rights reserved.</p>
+    </footer>
 
 </html>

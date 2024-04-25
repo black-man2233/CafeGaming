@@ -1,0 +1,42 @@
+.merchandise {
+    margin-bottom: 20px;
+}
+.merchandise h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.merchandise ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+.merchandise li {
+    margin-bottom: 10px;
+    flex: 0 0 calc(33.33% - 20px); /* Three items per row */
+    margin-right: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+}
+.merchandise li:nth-child(3n) {
+    margin-right: 0;
+}
+.merchandise li h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+.merchandise li p {
+    margin: 0;
+}
+.merchandise li button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
+.merchandise li button:hover {
+    background-color: #45a049;
+}

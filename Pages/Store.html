@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Store</title>
+    <link rel="stylesheet" href="../Styles/store.css">
+</head>
+<body>
+    <h1>Welcome to the Store</h1>
+    
+    <!-- Your store content goes here -->
+    <div class="merchandise" id="boardGames">
+        <h2>Gaming Board Games</h2>
+        <ul id="boardGamesList">
+            <!-- Board games will be dynamically added here -->
+        </ul>
+    </div>
+
+    <div class="merchandise" id="cardGames">
+        <h2>Card Games</h2>
+        <ul id="cardGamesList">
+            <!-- Card games will be dynamically added here -->
+        </ul>
+    </div>
+    
+    <script src="script.js"></script>
+    <script>
+        // Sample data for board games and card games
+        const boardGamesData = [
+            { name: "Board Game 1", price: "$19.99", amountLeft: 5 },
+            { name: "Board Game 2", price: "$24.99", amountLeft: 3 },
+            { name: "Board Game 3", price: "$29.99", amountLeft: 8 }
+            // Add more board games here
+        ];
+
+        const cardGamesData = [
+            { name: "Card Game 1", price: "$9.99", amountLeft: 10 },
+            { name: "Card Game 2", price: "$14.99", amountLeft: 6 },
+            { name: "Card Game 3", price: "$12.99", amountLeft: 4 }
+            // Add more card games here
+        ];
+
+        // Function to generate merchandise items dynamically
+        function generateMerchandiseList(containerId, itemsData) {
+            const container = document.getElementById(containerId);
+            const ul = container.querySelector('ul');
+            
+            itemsData.forEach(item => {
+                const li = document.createElement('li');
+                li.innerHTML = `
+                    <h3>${item.name}</h3>
+                    <p>Price: ${item.price}</p>
+                    <p>Amount Left: ${item.amountLeft}</p>
+                    <button>Add to Cart</button>
+                `;
+                ul.appendChild(li);
+            });
+        }
+
+        // Call the function to generate merchandise items for board games and card games
+        generateMerchandiseList('boardGames', boardGamesData);
+        generateMerchandiseList('cardGames', cardGamesData);
+    </script>
+</body>
+</html>

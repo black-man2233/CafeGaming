@@ -75,3 +75,8 @@ var events = [
   // Call the function to insert all gaming events
   insertEvents();
   
+// Sign up / Sign in handler
+function SignIn(element, color) {
+}
+
+  

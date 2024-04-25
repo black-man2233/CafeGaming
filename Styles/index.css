@@ -1,4 +1,13 @@
-/* styles.css */
+.UpcomingEvent {
+    text-align: center;
+    padding: 40px;
+    background-color: #ccc;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
 
 /* Global styles */
 body {
@@ -118,4 +127,88 @@ section {
     padding: 20px;
     text-align: center;
     margin: 20px;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    background-color: #666;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+    overflow: hidden;
+}
+
+.section {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.section h2 {
+    color: #333;
+}
+
+.section p {
+    color: #666;
+}
+
+.section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Media queries for responsiveness */
+@media only screen and (max-width: 768px) {
+
+    /* Adjust styles for smaller screens here */
+    .nav-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .auth-form-inline {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .auth-form-inline input[type="text"],
+    .auth-form-inline input[type="password"],
+    .auth-form-inline button {
+        margin: 5px 0;
+    }
+
+    .event-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        padding: 20px;
+    }
 }
