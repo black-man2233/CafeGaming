@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="styles/index.css">
+</head>
+
+<body>
+    <!-- Navigation bar -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Cafe Gaming</div>
+
+            <!-- Sign-up and sign-in forms in the navigation bar -->
+            <div class="auth-forms">
+                <form class="auth-form-inline" action="#sign-in" method="post">
+                    <input type="text" name="username" placeholder="Username" required>
+                    <input type="password" name="password" placeholder="Password" required>
+                    <button type="submit">Sign In</button>
+                    <!-- <button type="button" href="Pages/SignUp.html"> Sign Up</button> -->
+
+                    <Button type="button" onclick="location.href='Pages/SignUp.html';">Sign Up</Button>
+
+                </form>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main content -->
+    <div class="main-content">
+        <h1>Welcome to Cafe Gaming</h1>
+        <p>Your one-stop destination for gaming events.</p>
+    </div>
+
+    <!-- Upcoming events section -->
+    <div>
+        <link rel="stylesheet" href="../Styles/events.css">
+        <h2>Upcoming Gaming Events</h1>
+            <div class="event-container">
+                <!-- Event cards will be dynamically generated here -->
+            </div>
+            <script src="/Js/index.js"></script>
+    </div>
+
+</body>
+
+</html>
